@@ -1,0 +1,597 @@
+/*** You will not need this file until Unit 3 ***/
+/*** VSCodeEDU preview fix 
+
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+
+  When To Modify:
+  - If you change the background color of your webpage, you may need to update this rule too.
+***/
+html {
+    background-color: var(--bg-color);
+}
+
+/*** body ***
+  
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+
+  When To Modify:
+  - [ ] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+body {
+    /* Add a background color or image */
+    background-color: var(--bg-color); /* see bottom of file for color variables */
+
+    /* Customize the default size, color, and font for text*/
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+    /* Put space around the edges of the webpage */
+    margin: 50px;
+}
+
+/*** Text ***
+  
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+h1 {
+  color: #FAF0E6;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+p.desc {
+  color: var(--accent-color-darkest);
+  font-size: small;
+  line-height: 10%;
+}
+
+h3.tagline {
+  color: #CBBBA0;
+  font-weight: 400;
+  text-align: center;  
+}
+
+h2.lowersection {
+ color: var(--text-color);   
+  
+}
+
+
+a {
+  text-decoration: none;
+  transition: ease-in; 
+}
+
+a:link {
+  color: var(--bg-button);
+}
+
+a:visited {
+  color: var(--accent-color-dark);
+}
+
+a:hover {
+  color: var(--accent-color-dark);
+}
+
+a:active {
+  color: var(--text-color);
+}
+
+
+button {
+    /* Example Style, replace with your own! */
+    background-color: var(--bg-button);    /* button color */
+    color: white;               /* text color */
+    border: none;               /* hides the default border */
+    padding: 5px 12px;          /* space between button's text and edge */
+    border-radius: 5px;         /* curved edges instead of square */
+    cursor: pointer;            /* makes the cursor change when over button */
+   
+}
+
+button:hover {
+    /* Make the button look different when the user hovers over it */
+  background-color: var(--hero-button-hover);
+  font-weight: bold;
+}
+
+/*** header ***
+  
+  Purpose:
+  - Add style rules for your website's header section
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.header-container { /* Example A: This styles elements with class="header" */
+  display: flex;  
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px 40px;
+  align-items: center;
+  
+  margin-top: 100px;
+  text-align: center;
+  background-color: var(--hero-bg);
+  border-radius: 25px;
+}
+
+.header-item:nth-of-type(1){
+  width: 60%;
+}
+
+.header-item:nth-of-type(2){
+  width: 40%;
+}
+
+#header-img{
+  width: 150px;
+  max-width: 300px;
+}
+
+.header-button{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*** footer ***
+  
+  Purpose:
+  - Add style rules for your website's footer section
+
+  When To Modify:
+  - [ ] Project 3 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.footer { /* Example B: This styles elements with class="footer" */
+    
+}
+
+/*** Navigation bar (navbar) ***
+  
+  Purpose:
+  - Add style rules for your website's navbar
+
+  When To Modify:
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.navbar ul {
+    z-index: 1000; /* Ensures the navbar is on top of other elements */
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 15px;
+    left: 50%;  
+    transform: translateX(-50%); 
+
+    width: 90%;
+    max-width: 1100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #f7eee3;
+    padding: 10px 20px;
+
+    border-radius: 999px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+
+    color: #1E293B;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.navbar ul li a:hover {
+    background-color: #D9C3B0;
+}
+
+
+/*** About Section ***
+  
+  Purpose:
+  - Add style rules for your website's About section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+.intro {
+  background-color: #FFF7ED;
+    margin: 30px;
+    margin-top: 80px;
+    padding: 80px 20px;
+    border-radius: 25px;
+    color: #1E293B;
+    text-align: center;
+    box-shadow:  0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.features {
+  margin: 30px;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: var(--accent-color-light);
+}
+
+#feature-heading {
+  text-align: center;
+  color: #1E293B;
+  margin-bottom: 40px;
+  margin-top: -5px;
+  font-size: 40px;
+}
+
+.card-stack {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-c {
+  background-color: var(--bg-feature-card);
+  border-radius: 20px;
+  width: 260px;
+  overflow: hidden;
+  padding: 25px;
+  box-shadow:  0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+
+
+/*** Schedule Section ***
+  
+  Purpose:
+  - Add style rules for your website's Schedule section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+.week-schedule {
+    background-color: var(--hero-bg);
+    margin: 30px;
+    padding: 80px 20px;
+    border-radius: 25px;
+}
+
+.movie-stack {
+    flex-direction: row;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-card {
+  background-color: var(--bg-movie-card);
+  border-radius: 25px;
+  width: 260px;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow:  0 10px 25px rgba(0,0,0,0.08);
+}
+
+#movie-heading {
+  text-align: center;
+  color: var(--bg-movie-card-dark-mode);
+  margin-bottom: 40px;
+  margin-top: -5px;
+  font-size: 40px;
+}
+
+img.movie-img {
+  width: 100%;          
+  height: 320px;
+  object-fit: cover;    
+  border-radius: 15px;
+}
+
+
+p.moviedescr {
+    font-size: small;
+    line-height: 10px;
+}
+
+/*** Links Section ***
+  
+  Purpose:
+  - Add style rules for your website's Links section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+.block {
+  color: var(--accent-color-medium);
+}
+
+.dark-mode .rsvp-para {
+    color:#FAF0E6;
+}
+
+.end-section {
+  padding: 20px;
+  background-color: #FFF7ED;
+    margin: 30px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow:  0 10px 25px rgba(0,0,0,0.08);
+    border: 2px solid rgba(0,0,0,0.05);
+}
+/*** RSVP Section ***
+  
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.rsvp-container {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 60px;
+width: 100%;
+max-width: 900px;
+margin: 0 auto;
+padding-bottom: 50px;
+color: var(--hero-bg);
+}
+
+/* Add other rsvp-related selectors here */
+
+#rsvp-form {
+  color: var(--text-color);
+  margin-top: 20px;
+}
+
+.rsvp-para {
+max-width: 100%;
+padding-right: 10px;
+line-height: 2;
+text-align: left;
+}
+
+.rsvp-participants {
+  max-width: 100%;
+  padding-right: 10px;
+  text-align: left;
+}
+
+#rsvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--bg-movie-card-dark-mode);
+    margin: 30px;
+    margin-top: 90px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:  0 10px 25px rgba(0,0,0,0.08);
+    border: 2px solid rgba(0,0,0,0.05);
+}
+
+#card-h {
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background-color: pink;
+
+  /* Set border-color and background */
+}
+
+/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+/*** Success Modal  ***
+  
+  Purpose:
+  - Add style rules to your website's pop-up modal, which appears
+    when a user successfully submits the RSVP form
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.modal {
+  display: none;   /* modal should be hidden by default*/
+  position: fixed; /* modal cannot move around the screen */
+  z-index: 2;      /* modal appears above other elements */ 
+  
+  /* TODO: Make the modal fill the entire screen */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+
+  
+}
+
+.modal-container {
+    /* Change modal size and spacing here */
+    padding: 30px;
+    width: 55%;
+    
+
+    /* Customize modal style here */
+    background-color: #14121f;
+    color: #F5EBDD;
+    border: 9px solid #2b2b2b;
+    border-radius: 20px;
+
+    /* Optional: Use flexbox to customize .modal-item layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    box-shadow: 0 10px 30px rgba(29, 29, 29, 0.6);
+}
+
+.modal-item {
+    /* Optional: Style individual elements within the modal */
+    
+}
+
+#modal-img {
+  width: 90px;
+  height: auto;
+}
+
+#modal-text{
+  line-height: 1.7;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Poppins, sans-serif;
+}
+/* Default dark mode style */
+
+.dark-mode {
+  background-color: var(--bg-color-dark-mode);
+  color: var(--text-color-dark-mode);
+  border-radius: 25px;
+  padding-bottom: 10px;
+}
+
+/* Example: Different dark mode style for h1 */
+.dark-mode .rsvp-para {
+  color: var(--text-color);
+}
+
+.dark-mode #rsvp {
+  background-color: var(--accent-color-light);
+}
+
+.dark-mode .features {
+  background-color: var(--accent-color-darkest);
+}
+
+
+.dark-mode .feature-c {
+  background-color: var(--bg-feature-card-dark-mode);
+  color: var(--secondary-text-color-dark-mode);
+}
+
+.dark-mode #card-h {
+  color: var(--hero-bg);
+}
+
+.dark-mode #feature-heading {
+  color: var(--main-text-color-dark-mode);
+}
+
+.dark-mode .lowersection {
+  color: var(--text-color);
+}
+
+/*** Custom Colors (OPTIONAL) ***
+  
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+
+  When To Modify:
+  - [ ] Any time (OPTIONAL)
+***/
+
+:root {
+    /* Light Mode */
+    --bg-color: #FFF7ED;
+    --bg-feature-card: #FAF3E8;
+    --bg-movie-card: #ffffff; 
+    --bg-section: #F5EBDD;
+
+    --text-color: #333333;
+    --text-secondary: #6B7280;
+
+    --hero-bg: #111111;
+
+    --hero-button-hover: #ff4f85; 
+    --bg-button: #ff6b9a; 
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #0F172A;
+    --main-text-color-dark-mode: #F9EBDD;
+    --secondary-text-color-dark-mode: #ecdae5;
+
+    --bg-feature-card-dark-mode: #a84b7b;  
+    --bg-movie-card-dark-mode: #F5EBDD;    
+    --bg-section-dark-mode: #111827;
+
+    --hero-bg: #020617;
+
+    --bg-button: #fb749a;
+    --hero-button-hover: #ff5d8b;
+
+    /* Accent Colors */
+    --accent-color-light: #ffd1dc;
+    --accent-color-medium: #ff6b9a;
+    --accent-color-dark: #e05584;
+    --accent-color-darkest: #a63a5e;
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+
+}
