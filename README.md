@@ -19,7 +19,9 @@ CouchPop is a responsive watch-party web application designed to create an inter
 
 ## Demo
 
-*Demo coming soon.*
+https://github.com/user-attachments/assets/278c78a2-2e89-488f-b919-884709d160d1
+
+
 
 ## What I Learned
 
